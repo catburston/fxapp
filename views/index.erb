@@ -1,0 +1,43 @@
+<form action="/currency" method="post" name='convert' accept-charset="utf-8">
+  <div class="form-content">
+    <label name="amount" class="label">Amount:</label>
+    <div class="field">
+      <input type="number" name="amount" value="100">
+    </div>
+  </div>
+  <div class="form-content">
+    <label name="date" class="label">Date:</label>
+    <div class="field">
+      <select name="date">
+        <% @dates.each do |date| %>
+          <option value="<%= date %>"><%= date %></option>
+        <% end %>
+      </select>
+    </div>
+  </div>
+  <div class="form-content">
+    <label name="base_currency" class="label">Base Currency:</label>
+    <div class="field">
+      <select name="base_currency">
+        <% @base_currencies.each do |bcurr| %>
+          <option value="<%= bcurr %>"><%= bcurr %></option>
+        <% end %>
+      </select>
+    </div>
+    </div>
+  <div class="form-content">
+    <label name="counter_currency" class="label">Counter Currency:</label>
+    <div class="field">
+      <select name="counter_currency">
+        <% @counter_currencies.each do |ccurr| %>
+          <option value="<%= ccurr %>"><%= ccurr %></option>
+        <% end %>
+      </select>
+    </div>
+  </div>
+  <div class="form-content">
+    <div class="field">
+      <button type="submit" class="btn">Convert</button>
+    </div>
+  </div>
+</form>

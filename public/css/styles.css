@@ -1,0 +1,46 @@
+html{font-size: 62.5%;}
+body{font-family: Helvetica, Arial, sans-serif;}
+h1{font-size: 3rem;}
+h2{font-size: 1.6rem;}
+form, .results{font-size: 1.4rem; color: #222;}
+a{text-decoration:none; color: #222;}
+
+.main-content{height:100%; width:600px; margin:0 auto;}
+
+form .form-content, .results .results-content{
+  display: flex;
+  margin: 0 0 12px 0;
+}
+form .form-content .label, .results .results-content .label{
+  flex: 1;
+  text-align: right;
+  margin: 0 8px 0 0;
+  padding: 2px 0;
+}
+form .form-content .field, .results .results-content .results-field{
+  flex: 3;
+}
+form .form-content:last-child, .results .results-content:last-child{
+  display: flex;
+  justify-content: flex-end;
+}
+form .form-content:last-child .field, .results .results-content:last-child .results-field{
+  max-width: 75%;
+  border:none;
+}
+input, select, textarea, .btn, .results-field{
+  padding: .6rem 1rem;
+  font-size: 1.6rem;
+  border: solid 1px #eee;
+  background: #fff;
+  box-sizing: border-box;
+}
+input, select, .results-field{
+  width: 50%;
+}
+
+input[type="button"], .btn{
+  width: auto;
+  background:#777;
+  border:1px solid #222;
+}
